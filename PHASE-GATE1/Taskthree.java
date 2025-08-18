@@ -1,18 +1,23 @@
+import java.util.Scanner;
+
 public class Taskthree {
-    public static void main(String[] args) {
+public static void main(String[] args) {
 Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter a number: ");
-        
+
+System.out.print("Enter an integer: ");
 int number = scanner.nextInt();
 
-        for (int index = 1; index <= 20; index++) {
-            if (index % 3 == 0 && index % 5 == 0) {
-                System.out.println();
+if (isDivisibleBy3(number)) {
+ System.out.println(number + " is divisible by 3.");
+
+} else {
+            System.out.println(number + " is not divisible by 3.");
+}      
 }
-}
-	return number not divisible by 3;
+
+    public static boolean isDivisibleBy3(int number) {
+        return number % 3 == 0;
 }
 }
 
 
-//Write an application that reads an integer and determines and prints wether it's //divisible by 3 or not
